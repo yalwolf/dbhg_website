@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>关于后宫 | 蛋白后宫</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="蛋白后宫 - 主播蛋白i专属地图制作团." name="description">
+
+    <!-- App css -->
+    <link href="/static/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="/static/css/app-modern.min.css" rel="stylesheet" type="text/css" id="light-style">
+    <script src="/assets/js/vue.js"></script>
+    <style>
+        body {
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body class="loading" class="authentication-bg pb-0" data-layout-config='{"darkMode":false}'>
+    <!-- Pre-loader -->
+    <div id="preloader">
+        <div id="status" class="d-flex justify-content-center">
+            <div class="spinner-border avatar-md text-primary" role="status"></div>
+        </div>
+    </div>
+    <div id="app">
+        <!-- Topbar Start -->
+        <div class="navbar-custom topnav-navbar">
+            <div class="container-fluid">
+
+                <!-- LOGO -->
+                <a href="/index.html" class="topnav-logo">
+                    <span class="topnav-logo-lg">
+                        <img src="/static/image/logo.png" alt="" height="50">
+                    </span>
+                    <span class="topnav-logo-sm">
+                        <img src="/static/image/logo.ico" alt="" height="50">
+                    </span>
+                </a>
+
+                <ul class="list-unstyled topbar-menu float-end mb-0">
+
+                    <li class="dropdown notification-list">
+                        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" @click.prevent="" role="button" aria-haspopup="false" aria-expanded="false">
+                            <i class="dripicons-view-apps noti-icon"></i>
+                        </a>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated dropdown-lg p-0">
+
+                            <div class="p-2">
+                                <div class="row g-0">
+                                    <div class="col">
+                                        <a class="dropdown-icon-item" href="https://github.com/dbhg-studio">
+                                            <img src="/static/picture/github.png" alt="Github">
+                                            <span>GitHub</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </li>
+
+                    <li class="dropdown notification-list">
+                        <a v-if="login" class="nav-link dropdown-toggle nav-user arrow-none me-0" href="javascript:void(0);" @click.prevent="" data-bs-toggle="dropdown" id="topbar-userdrop" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="account-user-avatar">
+                                <img :src="userimg" alt="user-image" class="rounded-circle">
+                            </span>
+                        </a>
+                        <a v-if="!login" href="javascript:void(0);" class="nav-link dropdown-toggle nav-user arrow-none me-0" data-bs-toggle="dropdown" id="login-userdrop" role="button" aria-haspopup="true" aria-expanded="false" @click.prevent="">
+                            <span class="account-user-avatar">
+                                <i class="mdi mdi-24px mdi-account rounded-circle"></i>
+                            </span>
+                        </a>
+                        <!-- 未登录-Start -->
+                        <div v-if="!login" class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu profile-dropdown" aria-labelledby="login-userdrop">
+                            <!-- item-->
+                            <div class="dropdown-item notify-item" style="text-align:center;">
+                                <h6 class="text-overflow m-0">请登录</h6>
+                            </div>
+                            <div class="d-flex justify-content-center" style="text-align:center;">
+                                <a href="javascript:void(0);" @click.prevent="login_a()" class="dropdown-item notify-item">
+                                    <span>登录</span>
+                                </a>
+
+                                <a href="javascript:void(0);" @click.prevent="register()" class="dropdown-item notify-item">
+                                    <span>注册</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 未登录-End -->
+                        <!-- 已登录-Start -->
+                        <div v-if="login" class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu profile-dropdown" aria-labelledby="topbar-userdrop">
+                            <!-- item-->
+                            <div class=" dropdown-header noti-title">
+                                <h6 class="text-overflow m-0">Welcome ! {{username}}</h6>
+                            </div>
+
+                            <!-- item-->
+                            <a href="https://user.dbhg.top/account/home" class="dropdown-item notify-item">
+                                <i class="mdi mdi-account-circle me-1"></i>
+                                <span>我的账号</span>
+                            </a>
+
+                            <!-- item-->
+                            <a href="javascript:void(0);" @click="login_out()" class="dropdown-item notify-item">
+                                <i class="mdi mdi-logout me-1"></i>
+                                <span>登出</span>
+                            </a>
+
+                        </div>
+                        <!-- 已登录-End -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- end Topbar -->
+        <div class="account-pages pt-2 pt-sm-5 pb-4 pb-sm-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xxl-4 col-lg-10">
+                        <div class="card">
+                            <div class="card-body p-4">
+                                <h3 style="text-align:center;">蛋白后宫</h3>
+                                <h4 style="text-align:center;">致要加入蛋白后宫的蛋壳（粉丝）的一封信</h4>
+                                <br>
+                                <p><span style="color:red;">蛋白后宫成立与2019年</span>，蛋白后宫是为「主播蛋白」提供直播与视频「素材」的的一个小团队。</p>
+                                <p>如果你想要加入我们，请看看下面的信息，考虑一下</p>
+                                <br>
+                                <p style="text-align:center;color:red;font-weight:bold;">我们会有一个不定期的招人时间，加入交流群后请耐心等待招募公告
+                                </p>
+                                <p style="text-align:center;color:red;font-weight:bold;">招人时间一到，我们会发布「招募公告」与「招募问卷」</p>
+                                <p style="text-align:center;color:red;font-weight:bold;">填写「招募问卷」等待审核，审核通过则会将你拉入</p>
+                                <br>
+                                <h5>问卷流程</h5>
+                                <p style="color:red;">收到问卷=>填写相应的信息=>提交地图文件与截图=>提交问卷=>等待审核</p>
+                                <br>
+                                <h5>审核流程</h5>
+                                <p style="color:red;">收到问卷=>查看填写的信息=>查看地图与截图=>等待招募结束=>反馈审核结果</p>
+                                <br>
+                                <h5>如何把审核通过概率提高？</h5>
+                                <p>首先<span style="color:red;">你的脑洞一定要大，想法一定要多，这样利于造图</span></p>
+                                <br>
+                                <h5>地图制作方面</h5>
+                                <h5>单人地图制作=></h5>
+                                <p>- 玩法至少有一个以上原创关卡就行</p>
+                                <p>- 造完图后，一定要验图，如果是多人图，可以找团队内有空的小伙伴一起验图</p>
+                                <h5>多人地图制作=></h5>
+                                <p>- 玩法至少有两个以上原创关卡就行</p>
+                                <p>- 要考虑地图质量，游玩时间，关卡难度等因素</p>
+                                <p>- 造完图后，一定要验图，如果是多人图，可以找团队内有空的小伙伴一起验图</p>
+                                <h5>合作制作地图=></h5>
+                                <p>- 依旧是玩法至少有两个以上原创关卡就行</p>
+                                <p>- 多人制作不同关卡时，一定要规划好区域</p>
+                                <p>- 除了要考虑地图质量同时，还要考虑游玩时间，关卡难度等因素</p>
+                                <p>- 造完图后，一定要验图，如果是多人图，可以找团队内有空的小伙伴一起验图</p>
+                                <h5>建筑类地图=></h5>
+                                <p>- 建筑其实没什么好说的，有脑有肝有想法就行</p>
+                                <p>- 其次就是要注意，建筑的主题是否合规</p>
+                                <br>
+                                <h5>高级地图方面</h5>
+                                <h5>命令与资源包=></h5>
+                                <p>- 必须知道我的世界内的基础指令，如果你会高级指令那便更好</p>
+                                <p>- 资源包方面，材质包与音效包为前者，数据包为后者</p>
+                                <h5>红石方面=></h5>
+                                <p>- 了解红石基础知识即可，地图制作用红石的地方并不是很多，除非你能用纯红石制作出一张图</p>
+                                <br>
+                                <h5>关于造图端</h5>
+                                <p>- 使用蛋白造图端(1.7.10)即可</p>
+                                <p>- 如果1.7.10限制了你的想法，可以使用1.12.2(纯净版)或指定版本</p>
+                                <br>
+                                <p style="text-align:center;">如果你的地图非常完美，或者因为什么技术被大大看上的话，那你就会通过特殊通道进入哦</p>
+                                <br>
+                                <h4 style="text-align:center;">如果看完之后，决定想加入的话，点击下方链接加入「交流群」等待「招募信息」吧</h4>
+                                <h4 style="text-align:center;"><a href="join.html">加入群聊</a></h4>
+                            </div>
+                            <!-- end .card-body -->
+                        </div>
+                        <!-- end .align-items-center.d-flex.h-100-->
+                    </div>
+                    <!-- end auth-fluid-form-box-->
+                </div>
+                <!-- end auth-fluid-->
+            </div>
+            <!-- end col -->
+        </div>
+    </div>
+
+    <!-- bundle -->
+    <script src="/static/js/vendor.min.js"></script>
+    <script src="/static/js/app.min.js"></script>
+    <script src="/assets/js/pages/index.min.js"></script>
+</body>
+
+</html>

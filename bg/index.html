@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="utf-8">
+    <title>关于后宫 | 蛋白后宫</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="蛋白后宫 - 主播蛋白i专属地图制作团." name="description">
+
+    <!-- App css -->
+    <link href="/static/css/icons.min.css" rel="stylesheet" type="text/css">
+    <link href="/static/css/app-modern.min.css" rel="stylesheet" type="text/css" id="light-style">
+
+    <script type="text/javascript">
+        var mobileAgent = new Array("iphone", "ipod", "ipad", "android", "mobile", "linux", "blackberry", "webos", "incognito", "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
+        var browser = navigator.userAgent.toLowerCase();
+        var isMobile = false;
+        for (var i = 0; i < mobileAgent.length; i++) {
+            if (browser.indexOf(mobileAgent[i]) != -1) {
+                isMobile = true;
+                //alert(mobileAgent[i]);
+                location.href = '/static/image/bg_1080p.png';
+                break;
+            }
+        }
+    </script>
+
+    <script src="/assets/js/vue.js"></script>
+    <style>
+        body {
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body class="loading" class="authentication-bg pb-0" data-layout-config='{"darkMode":false}'>
+    <!-- Pre-loader -->
+    <div id="preloader">
+        <div id="status" class="d-flex justify-content-center">
+            <div class="spinner-border avatar-md text-primary" role="status"></div>
+        </div>
+    </div>
+    <div id="app">
+        <!-- Topbar Start -->
+        <div class="navbar-custom topnav-navbar">
+            <div class="container-fluid">
+
+                <!-- LOGO -->
+                <a href="/index.html" class="topnav-logo">
+                    <span class="topnav-logo-lg">
+                        <img src="/static/image/logo.png" alt="" height="50">
+                    </span>
+                    <span class="topnav-logo-sm">
+                        <img src="/static/image/logo.ico" alt="" height="50">
+                    </span>
+                </a>
+
+                <ul class="list-unstyled topbar-menu float-end mb-0">
+
+                    <li class="dropdown notification-list">
+                        <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" @click.prevent=""
+                            role="button" aria-haspopup="false" aria-expanded="false">
+                            <i class="dripicons-view-apps noti-icon"></i>
+                        </a>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated dropdown-lg p-0">
+
+                            <div class="p-2">
+                                <div class="row g-0">
+                                    <div class="col">
+                                        <a class="dropdown-icon-item" href="https://github.com/dbhg-studio">
+                                            <img src="/static/picture/github.png" alt="Github">
+                                            <span>GitHub</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- end Topbar -->
+        <div class="pt-2 pt-sm-5 pb-4 pb-sm-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="card-body">
+                        <img src="/static/image/bg_1080p.png" alt="" width="1080"
+                            style=" padding: 5px; border: 1px solid #ddd;border-radius: 4px;box-shadow: 1px 1px 10px #000;">
+                    </div> <!-- end .align-items-center.d-flex.h-100-->
+                    <!-- end auth-fluid-form-box-->
+                </div>
+                <!-- end auth-fluid-->
+            </div> <!-- end col -->
+        </div>
+    </div>
+
+    <!-- bundle -->
+    <script src="/static/js/vendor.min.js"></script>
+    <script src="/static/js/app.min.js"></script>
+</body>
+
+</html>
