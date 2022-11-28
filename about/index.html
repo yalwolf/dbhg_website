@@ -64,7 +64,7 @@
                     </li>
 
                     <li class="dropdown notification-list">
-                        <a v-if="login" class="nav-link dropdown-toggle nav-user arrow-none me-0" href="javascript:void(0);" @click.prevent="" data-bs-toggle="dropdown" id="topbar-userdrop" role="button" aria-haspopup="true" aria-expanded="false">
+                        <a v-if="login==1" class="nav-link dropdown-toggle nav-user arrow-none me-0" href="javascript:void(0);" @click.prevent="" data-bs-toggle="dropdown" id="topbar-userdrop" role="button" aria-haspopup="true" aria-expanded="false">
                             <span class="account-user-avatar">
                                 <img :src="userimg" alt="user-image" class="rounded-circle">
                             </span>
@@ -74,8 +74,7 @@
                                 <i class="mdi mdi-24px mdi-account rounded-circle"></i>
                             </span>
                         </a>
-                        <!-- 未登录-Start -->
-                        <div v-if="!login" class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu profile-dropdown" aria-labelledby="login-userdrop">
+                        <div v-if="login==2" class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu profile-dropdown" aria-labelledby="login-userdrop">
                             <!-- item-->
                             <div class="dropdown-item notify-item" style="text-align:center;">
                                 <h6 class="text-overflow m-0">请登录</h6>
@@ -90,8 +89,6 @@
                                 </a>
                             </div>
                         </div>
-                        <!-- 未登录-End -->
-                        <!-- 已登录-Start -->
                         <div v-if="login" class="dropdown-menu dropdown-menu-end dropdown-menu-animated topbar-dropdown-menu profile-dropdown" aria-labelledby="topbar-userdrop">
                             <!-- item-->
                             <div class=" dropdown-header noti-title">
@@ -111,12 +108,10 @@
                             </a>
 
                         </div>
-                        <!-- 已登录-End -->
                     </li>
                 </ul>
             </div>
         </div>
-        <!-- end Topbar -->
         <div class="account-pages pt-2 pt-sm-5 pb-4 pb-sm-5">
             <div class="container">
                 <div class="row justify-content-center">
@@ -176,15 +171,10 @@
                                 <h4 style="text-align:center;">如果看完之后，决定想加入的话，点击下方链接加入「交流群」等待「招募信息」吧</h4>
                                 <h4 style="text-align:center;"><a href="join.html">加入群聊</a></h4>
                             </div>
-                            <!-- end .card-body -->
                         </div>
-                        <!-- end .align-items-center.d-flex.h-100-->
                     </div>
-                    <!-- end auth-fluid-form-box-->
                 </div>
-                <!-- end auth-fluid-->
             </div>
-            <!-- end col -->
         </div>
     </div>
 
