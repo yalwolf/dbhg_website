@@ -3,14 +3,16 @@
 
 <head>
     <meta charset="utf-8">
-    <title>蛋白后宫,一个辅助主播蛋白的小团队</title>
+    <title>蛋白后宫 - 一个辅助主播蛋白的小团队</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="蛋白后宫,主播蛋白i专属地图制作团." name="description">
+    <meta content="蛋白后宫 - 主播蛋白i专属地图制作团." name="description">
     <link href="/static/css/icons.min.css" rel="stylesheet" type="text/css">
     <link href="/static/css/app-modern.min.css" rel="stylesheet" type="text/css" id="light-style">
-    <script src="/assets/js/vue.js"></script>
+    <link rel="stylesheet" href="//unpkg.com/element-plus/dist/index.css" />
+    <script src="/assets/js/vue3/vue.global.prod.js"></script>
+    <script src="//unpkg.com/element-plus"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="/assets/js/api.js"></script>
+    <!-- <script src="/assets/js/api.js"></script> -->
 </head>
 
 <body class="authentication-bg pb-0" class="loading" data-layout-config='{"darkMode":false}'>
@@ -115,7 +117,7 @@
                                 <button type="button" @click="hgcy()" class="btn btn-outline-dbhg">后宫成员</button>
                                 <br>
                                 <br>
-                                <button type="button" @click="account()" class="btn btn-outline-dbhg">蛋壳通行证</button>
+                                <button type="button" @click="account()" class="btn btn-outline-dbhg">后宫通行证</button>
                                 <button type="button" @click="about()" class="btn btn-outline-dbhg">关于后宫</button>
                                 <br>
                                 <br>
